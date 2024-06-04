@@ -1,0 +1,168 @@
+/* src/App.css */
+
+.App {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.builder {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.question {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.prompt-input,
+.answer-input,
+.nextid-select {
+  display: block;
+  margin: 5px 0;
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.delete-btn,
+.add-btn,
+.save-btn,
+.export-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 3px 5px;
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.import-input {
+  margin-top: 5px;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+}
+
+.add-btn {
+  background-color: #28a745;
+}
+
+.save-btn {
+  margin-top: 20px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.tree-container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.edit-form {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.edit-form h3 {
+  margin-top: 0;
+}
+
+.edit-group {
+  margin-bottom: 10px;
+}
+
+.edit-input,
+.edit-select {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.answers {
+  margin-left: 60px;
+}
+
+.answer {
+  display: flex;
+  gap: 10px;
+}
+
+.answer-input {
+  max-width: 80%;
+  flex: 1 0 80%;
+}
+
+.question-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.collapse-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+#root {
+  width: 100%;
+}
+
+.tree-container {
+  height: 80vh;
+  width: 100%;
+}
+
+.react-flow__node {
+  min-width: 150px;
+}
+
+.react-flow__minimap {
+  height: 150px;
+}
+
+.react-flow__background {
+  background-color: #f0f0f0;
+}
+
+input.title-input {
+  width: 400px;
+  height: 20px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+}
+
+.tabs .active {
+  background: #000;
+  color: #fff;
+}
+
+.pointer {
+  cursor: pointer;
+  margin-left: 10px;
+  text-decoration: underline;
+}
+
+.tabs {
+  margin-bottom: 20px;
+}
