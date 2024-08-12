@@ -58,12 +58,14 @@ function QuestionForm({
                     className="nextid-select"
                   >
                     <option value="">Select next question</option>
-                    {questions.map((q) => (
-                      <option key={q.id} value={q.id}>
-                        {q.prompt}
-                      </option>
-                    ))}
-                    <option value="end">Thank you for the information</option>
+                    {questions
+                      .filter((q) => q.id !== question.id)
+                      .map((q) => (
+                        <option key={q.id} value={q.id}>
+                          {q.prompt}
+                        </option>
+                      ))}
+                    <option value="end">End</option>
                   </select>
                   <button
                     onClick={() => deleteAnswer(question.id, answer.id)}

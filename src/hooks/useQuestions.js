@@ -131,6 +131,35 @@ export function useQuestions(initialQuestions, initialTitle = "") {
     reader.readAsText(file);
   };
 
+  const fetchQuestionTree = async (id) => {
+    const response = await fetch(
+      `https://tabi-core.azurewebsites.net/api/questionTree/${id}`
+    );
+    if (response.ok) {
+      const data = await response.json();
+      setQuestions(data.question.questions);
+      setTitle(data.question.title);
+    } else {
+      console.error("Failed to fetch question tree");
+    }
+  };
+
+  const saveQuestionsToDb = async () => {
+    const questionTree = { title, questions };
+    const response = await fetch(
+      "https://tabi-core.azurewebsites.net/api/questionTree",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(questionTree),
+      }
+    );
+
+    if (!response.ok) {
+      console.error("Failed to save question tree");
+    }
+  };
+
   return {
     title,
     setTitle,
@@ -151,5 +180,7 @@ export function useQuestions(initialQuestions, initialTitle = "") {
     handleNodeClick,
     handleFileUpload,
     setSavedJson,
+    fetchQuestionTree,
+    saveQuestionsToDb
   };
 }

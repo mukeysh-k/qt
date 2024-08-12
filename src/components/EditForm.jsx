@@ -46,7 +46,7 @@ function EditForm({
                   {q.prompt}
                 </option>
               ))}
-              <option value="end">Thank you for the information</option>
+              <option value="end">End</option>
             </select>
           </div>
         ))}
